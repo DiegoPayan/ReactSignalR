@@ -1,0 +1,4 @@
+const proxy = require('http-proxy-middleware');
+module.exports = app => {
+    app.use(proxy('/reportesHub', {target: 'http://localhost:5100/',  ws: true}));
+}
